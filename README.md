@@ -16,7 +16,7 @@ As a drupal web developer, I've fallen on using familar tools and so this all wo
 
 There is a dockerfile that builds the raylib and fann libraries.
 
-# Requirements
+## Requirements
 
 This has only been tested on Ubuntu 21.04 
 
@@ -34,3 +34,7 @@ Just run
 ```
 lando php neural.php
 ```
+
+
+## Learn more about neural networks in php
+https://www.youtube.com/watch?v=5bFxDsoNFzU
