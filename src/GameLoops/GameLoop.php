@@ -76,12 +76,12 @@ final class GameLoop {
   }
 
   function isInRectangle($dude) {
-     $vector = new Vector2($dude->state['pos']['x'],$dude->state['pos']['y']);
-     $rectangle = new Rectangle($this->leftBound, $this->lowerBound, $this->boxWidth,$this->boxHeight);
+    $vector = new Vector2($dude->state['pos']['x'],$dude->state['pos']['y']);
+    $rectangle = new Rectangle($this->leftBound, $this->lowerBound, $this->boxWidth,$this->boxHeight);
 
 
     return CheckCollisionPointRec($vector, $rectangle);
-   }
+  }
 
   public function __construct(int $width, int $height, int $number_of_dudes, $lifespan, $nowindow = FALSE, $start_pos = [400, 500]) {
 
@@ -113,7 +113,7 @@ final class GameLoop {
         return $key;
       }
     }
- }
+  }
 
   private function randomMutationAmount() {
     //return random_float(-0.00000000000000001,0.000000000000000001);
@@ -153,10 +153,10 @@ final class GameLoop {
 
     while (TRUE) {
       echo "Start loop generation count: $this->generationCount\n";
-//      $this->pos = [
-//        'x' => random_int(0,800),
-//        'y' => random_int(0,600),
-//      ];
+      //      $this->pos = [
+      //        'x' => random_int(0,800),
+      //        'y' => random_int(0,600),
+      //      ];
 
       // Let this generation live.
       $results = $this->generation();
@@ -175,9 +175,9 @@ final class GameLoop {
         $dude->state['age']      = 0;
         $dude->state['color']    = 'maroon';
 
-	if ($dude_id == $results['firstMan']) {
+        if ($dude_id == $results['firstMan']) {
           $dude->state['color'] = 'orange';
-	}
+        }
       }
 
       if (!empty($this->dudes) && !empty($winners)) {
@@ -204,7 +204,7 @@ final class GameLoop {
 
   public function normalize($value, $min, $max) {
     $normalized = ($value - $min) / ($max - $min);
-      return $normalized;
+    return $normalized;
   }
 
   public function reverse_normalize($value, $min, $max) {
@@ -274,18 +274,18 @@ final class GameLoop {
       foreach ($distances_remapped_1 as $dude_id => $distance_percentage) {
         if (random_int(1, 100) <= ceil($distance_percentage)) {
           if ($firstMan === FALSE) {
-	    $firstMan = $dude_id;
-	  }
+            $firstMan = $dude_id;
+          }
           //echo "Winner $dude_id: (chance was $distance_percentage%). {$distances[$dude_id]}.\n";
           $winners[] = $dude_id;
         }
       }
     }
 
-//    if (empty($winners)) {
-//      echo "Winners is empty, add one for fun\n";
-//      $winners[] = max(array_keys($this->dudes));
-//    }
+    //    if (empty($winners)) {
+    //      echo "Winners is empty, add one for fun\n";
+    //      $winners[] = max(array_keys($this->dudes));
+    //    }
 
     if (count($this->dudes) > 10) {
       $how_many_dudes_to_kill = floor(95 / 100 * count($distances));
@@ -306,8 +306,8 @@ final class GameLoop {
     }
 
     return [
-     'firstMan' => $firstMan, 
-     'winners'  => $winners,
+      'firstMan' => $firstMan,
+      'winners'  => $winners,
     ];
   }
 
@@ -341,14 +341,14 @@ final class GameLoop {
 
       if ($dude->state['color'] == 'maroon') {
         $color = $dude->state['color'];
-	$width = 5;
-	$height = 5;
+        $width = 5;
+        $height = 5;
         //DrawRectangle($dude->state['pos']['x'], $dude->state['pos']['y'], $width, $height, Color::$color());
       }
       else if ($dude->state['color'] == 'orange') {
         DrawCircle($dude->state['pos']['x'], $dude->state['pos']['y'], 20, Color::violet());
       }
-      
+
       $dude->state['count']++;
     }
 
@@ -356,10 +356,10 @@ final class GameLoop {
     EndDrawing();
   }
 
- /**
- * @param mixed $dude
- * @return \AiLife\Dudes\Dude
- */
+  /**
+   * @param mixed $dude
+   * @return \AiLife\Dudes\Dude
+   */
   private function newBredDude(Dude $dude): Dude {
     $new_dude = clone $dude;
     //$new_dude->ann = $dude->ann;

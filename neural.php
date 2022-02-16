@@ -24,6 +24,7 @@ $start_pos = [
   'x' => random_int(0,800),
   'y' => random_int(0,600),
 ];
+
 //$start_pos = [
 //  'x' => 100,
 //  'y' => 250,
