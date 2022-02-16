@@ -1,0 +1,23 @@
+name: snake
+services:
+  ubuntu:
+    type: compose
+    app_mount: delegated
+    services:
+       command: sleep infinity 
+       build:
+         context: .
+         dockerfile: Dockerfile
+       environment:
+         DISPLAY: ${DISPLAY}
+         PHP_IDE_CONFIG: "serverName=snake"
+         XDEBUG_MODE: debug
+         XDEBUG_SESSION: 1
+       volumes:
+         - /tmp/.X11-unix:/tmp/.X11-unix
+tooling:
+  php:
+    service: ubuntu 
+    cmd:
+      - "php"
+

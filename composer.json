@@ -1,0 +1,11 @@
+{
+    "require": {
+        "nawarian/raylib-ffi": "dev-main",
+        "php-ai/php-ml": "^0.4.1"
+ },
+ "autoload": {
+    "psr-4": {
+        "AiLife\\": "src/"
+    }
+ }
+}
