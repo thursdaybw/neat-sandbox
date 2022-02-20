@@ -1,6 +1,6 @@
 name: neat-sandbox 
 services:
-  ubuntu:
+  appserver:
     type: compose
     app_mount: delegated
     services:
@@ -18,9 +18,12 @@ services:
          LIBGL_ALWAYS_SOFTWARE: 1
        volumes:
          - /tmp/.X11-unix:/tmp/.X11-unix
+events:
+  pre-start:
+    - cd /app && composer install 
 tooling:
   php:
-    service: ubuntu 
+    service: appserver 
     cmd:
       - "php"
 
