@@ -13,7 +13,7 @@ services:
          PHP_IDE_CONFIG: "serverName=neat-sandbox"
          XDEBUG_MODE: debug
          XDEBUG_SESSION: 1
-         LD_LIBRARY_PATH: /usr/local/lib 
+         LD_LIBRARY_PATH: /usr/local/lib
          # https://askubuntu.com/questions/170668/intel-do-flush-locked-failed-input-output-error
          LIBGL_ALWAYS_SOFTWARE: 1
        volumes:
