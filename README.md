@@ -35,6 +35,42 @@ Just run
 lando php neural.php
 ```
 
-
 ## Learn more about neural networks in php
 https://www.youtube.com/watch?v=5bFxDsoNFzU
+
+
+## Raylib notes and links
+
+### Excellent video covering the status PHP game and the RAYLIB-PHP library.
+https://www.youtube.com/watch?v=q1X_6TYd030
+
+### The raylib-library
+https://github.com/joseph-montanez/raylib-php/
+
+This looks like an excellect project. The info in the readme, the youtube videos etc have great information.
+
+This library needs to be compiled and linked into PHP, I was unable to get this library to compile and link correctly and fell back to using [raylib-ffi](https://github.com/nawarian/raylib-ffi) which is slower but achieved my demo purposes for now.
+
+
+### RaylibFFI
+https://github.com/nawarian/raylib-ffi
+
+This is the library I used to communicate with raylib c library. It's php based library so is installed with composer.
+simple, easy, slow.
+
+### RaylibCPP
+This PHP library appears to be stalled, but not much more than raylib-php is. I haven't looked into this one much as it appears less stable thatn raylib-php and raylib-ffi worked for me.
+
+## PHP Neural nets links and notes
+
+## PHP FANN Fast 
+
+An excellent overview of the FANN libary in PHP and how to use it. This is essentially a digestible interpretation of the PHP documentation.
+https://www.youtube.com/watch?v=5bFxDsoNFzU&t=155s
+
+
+PHP Docs:
+https://www.php.net/manual/en/book.fann.php
+
+FANN overview:
+https://github.com/libfann/fann
