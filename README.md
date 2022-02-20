@@ -68,6 +68,11 @@ This PHP library appears to be stalled, but not much more than raylib-php is. I 
 An excellent overview of the FANN libary in PHP and how to use it. This is essentially a digestible interpretation of the PHP documentation.
 https://www.youtube.com/watch?v=5bFxDsoNFzU&t=155s
 
+## More details on Neural networks in PHP.
+
+Learn about matrices. maybe.
+https://www.youtube.com/watch?v=iC13u7tspyg
+
 
 PHP Docs:
 https://www.php.net/manual/en/book.fann.php
